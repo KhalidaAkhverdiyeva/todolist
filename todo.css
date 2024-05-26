@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.gradientBackground {
+  width: 100%;
+  height: 100vh;
+  background-color: #003049;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.appContainer {
+  background-color: #f5ebe0;
+  border-radius: 20px;
+  padding: 30px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#errorMessage {
+  display: none;
+  background-color: #fb5607;
+  border-radius: 20px;
+  padding: 20px;
+  width: 700px;
+  color: white;
+}
+
+h2 {
+  color: #001e2e;
+  font-size: 34px;
+}
+
+#addTaskButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: solid rgb(247, 245, 245) 1px;
+  background-color: #fb5607;
+  border-color: transparent;
+  color: rgb(255, 254, 252);
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+input {
+  padding: 5px 10px;
+  border-color: transparent;
+  outline: none;
+  border-radius: 20px;
+  font-size: 20px;
+  width: 500px;
+}
+
+.inputButtonRow {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+ul li {
+  padding: 7px 20px 7px 40px;
+  list-style: none;
+  font-size: 20px;
+  color: #001e2e;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li span {
+  flex-grow: 1;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-image: url(images/radio-button-unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 17px;
+  left: 3px;
+}
+ul li.checked {
+  text-decoration: line-through;
+  color: grey;
+}
+ul li.checked::before {
+  background-image: url(./images/checked.png);
+}
+
+ul li i {
+  background-color: transparent;
+  padding: 10px;
+}
+ul li i:hover {
+  background-color: #e3dfdc;
+  border-radius: 50%;
+  padding: 10px;
+}
